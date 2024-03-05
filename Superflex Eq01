@@ -1,0 +1,11 @@
+import math
+Vertical_1 = 0.4 #Vertical delta， 1st Tunnable input
+Superflex_Thickness = 0.231 #Superflex thickness, 2nd Tunnable input
+BR = 5.0 * Superflex_Thickness #Bending Radius, 3rd Tunnable input
+print ("Superflex min Bending Radius is:")
+print (BR)
+Arc_angle = 0.0  #initialization
+Arc_angle = math.acos((2* BR - Vertical_1)/(2*BR) * 1.0)
+min_horizontal_distance = 2 * BR * math.sin(Arc_angle)
+print ("Shortest horizontal distance is :")
+print (min_horizontal_distance)
